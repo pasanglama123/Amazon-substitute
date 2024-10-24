@@ -99,11 +99,7 @@ document.querySelectorAll('.js-add-to-cart')
         const timeoutId =setTimeout(()=>{addedMessage.classList.remove('added-to-cart-visible');
         },2000);
 
-        addedMessageTimeouts[productId] = timeoutId
-
-     
-       
-        console.log(cart);
+        addedMessageTimeouts[productId] = timeoutId;
 
     });
 });
