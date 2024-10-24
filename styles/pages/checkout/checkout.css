@@ -63,7 +63,6 @@
       1 in the grid. (Normally, the row that an element is
       placed in is determined by the order of the elements in
       the HTML. grid-row overrides this default ordering). */
-    grid-row: 1;
     margin-bottom: 12px;
   }
 }
