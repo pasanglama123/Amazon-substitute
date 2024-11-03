@@ -5,6 +5,8 @@ import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'; 
 
 import {deliveryOptions} from '../../data/deliveryOptions.js';
+
+import { renderPaymentSummary } from './paymentSummary.js';
  
 // hello(); 
 
@@ -42,7 +44,7 @@ export function renderOrderSummary() {
 
       const today = dayjs();
           
-          const deliveryDay = today.add(deliveryOption.deliveryDays, 'days');
+          const deliveryDay = today.add(deliveryOptions.deliveryDays, 'days');
           
           const formDate = deliveryDay.format('dddd, MMMM D');
 
@@ -138,7 +140,9 @@ export function renderOrderSummary() {
           
           const container = document.querySelector(`.js-cart-item-container-${productId}`);
           
-          container.remove(); // this remove the DOM from the  page 
+          container.remove(); // this remove the DOM from the  page
+          
+          renderPaymentSummary 
       });
   });
   document.querySelectorAll('.js-delivery-option')
@@ -147,6 +151,7 @@ export function renderOrderSummary() {
           const {productId, deliveryOptionId} = element.dataset;
           updateDeliveryOption(productId, deliveryOptionId);
           renderOrderSummary();
+          renderPaymentSummary();
       
   });
   });
