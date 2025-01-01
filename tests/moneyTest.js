@@ -1,7 +1,9 @@
 import {formatCurrency} from '../scripts/utils/money.js';
 
-// AUTOMATED- TESTING IN SOFTWARE DEVELOPMENTf
+// AUTOMATED- TESTING IN SOFTWARE DEVELOPMENT
 
+
+console.log('test suite: formatCurrency');
 console.log('convert cents to dollars')
 
 // BASIC TEST CASES
@@ -23,7 +25,7 @@ if (formatCurrency(0) === '0.00'){
 
 console.log('rounding up to the nearest cents');
 
-if (formatCurrency(2000.5) === '20.01'){
+if (formatCurrency(2000.5) === '20.01 '){
     console.log('passed');
 }else {
     console.log('failed');
