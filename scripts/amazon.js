@@ -42,7 +42,7 @@ products.forEach((product) => {
         </select>
       </div>
 
-      ${product.extraInfoHTML()}  // polymorphism 
+      ${product.extraInfoHTML()}  
 
       <div class="product-spacer"></div>
 
