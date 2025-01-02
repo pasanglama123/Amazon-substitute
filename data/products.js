@@ -102,7 +102,27 @@ class Clothing extends Product{
 
 
 
+// use of built-in class like Date()
+// const date = new Date();
+// console.log(date);
+// console.log(date.toLocaleTimeString());
 
+/*
+console.log(this);  // it is undefined 
+
+const object2 = {  //if we inside the method we can use this and it will point to the object,
+                   // if we are outside the method there is no object to point to, 
+  a:2,
+  b: this.a
+}
+*/
+
+/*
+function logThis() {
+console.log(this);
+}
+logThis();
+*/
 
 
 export const products = [
